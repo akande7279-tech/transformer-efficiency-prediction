@@ -1,0 +1,9 @@
+model.compile(optimizer=Adam(learning_rate=1e-3), loss='mse', metrics=['mae'])
+
+history = model.fit(
+    X_train_s, y_train_s,
+    validation_data=(X_val_s, y_val_s),
+    epochs=500,
+    batch_size=32, 
+    verbose=0
+) 
